@@ -99,6 +99,17 @@ namespace Foundations
 
 
         /// <summary>
+        /// 转化：弧度 -> 角度(0-360)
+        /// </summary>
+        public static float convert_dir_to_angle(Vector2 dir)
+        {
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            if (angle < 0) angle += 360f;
+            return angle;
+        }
+
+
+        /// <summary>
         /// LookRotation增强
         /// </summary>
         public static Quaternion look_rotation_from_left(Vector2 dir)

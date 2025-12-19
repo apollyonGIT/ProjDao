@@ -1,28 +1,25 @@
-﻿using Foundations;
+﻿using Battles.Cameras;
+using Battles.Humans;
+using Foundations;
 using UnityEngine;
 
 namespace Battle.Cameras
 {
     public class CameraPD : Producer
     {
-        public Vector2 pos_offset;
-
-        public override IMgr imgr => null;
+        public override IMgr imgr => mgr;
+        CameraMgr mgr;
 
         //==================================================================================================
 
-        public override void call()
+        public override void init(int priority)
         {
-
+            mgr = new("CameraMgr", priority);
         }
 
 
-        public override void init(int priority)
+        public override void call()
         {
-            Vector2 pos = new(BattleContext.instance.plots_mid_pos_x, 0);
-            pos += pos_offset;
-
-            BattleSceneRoot.instance.mainCamera.transform.localPosition = pos;
         }
     }
 }

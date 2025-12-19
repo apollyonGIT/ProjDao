@@ -3,6 +3,7 @@ using Foundations;
 using Foundations.Tickers;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Battle
 {
@@ -29,6 +30,15 @@ namespace Battle
             BattleContext.instance.detach();
 
             base.on_fini();
+        }
+
+
+        public Vector2 GetWorldMousePosition()
+        {
+            var mousePosition = Mouse.current.position.ReadValue();
+            var pos = mainCamera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 10));
+
+            return pos;
         }
     }
 }

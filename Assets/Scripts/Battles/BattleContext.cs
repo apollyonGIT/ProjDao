@@ -1,17 +1,17 @@
 ﻿using Foundations;
 using Foundations.Tickers;
+using UnityEngine;
 
 namespace Battle
 {
     public class BattleContext : Singleton<BattleContext>
     {
         public bool is_ban_player_input;
-
         public bool is_player_seckill;
 
-        //战场
-        public int plots_count;
-        public float plots_mid_pos_x;
+        public Vector2 main_pos;
+
+        public bool is_moveAhead;
 
         //==================================================================================================
 

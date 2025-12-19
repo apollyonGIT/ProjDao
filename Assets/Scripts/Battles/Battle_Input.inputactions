@@ -6,45 +6,9 @@
             "id": "c3c6cdb8-80a7-4a51-8909-9d90416a2081",
             "actions": [
                 {
-                    "name": "MoveLeft",
+                    "name": "MoveAhead",
                     "type": "Button",
                     "id": "0af7574a-3497-452c-9587-5aff931c098b",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "MoveRight",
-                    "type": "Button",
-                    "id": "6277a419-1194-42f5-8451-d8ea2af3dea4",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "TurnAround",
-                    "type": "Button",
-                    "id": "6167aefc-a322-402e-9187-b261de80dc0d",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Wait",
-                    "type": "Button",
-                    "id": "16955c85-9930-4e54-8ef9-b831cb58a16c",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "Cast",
-                    "type": "Button",
-                    "id": "4653f738-6e49-4a98-8e06-7e69f6394993",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -55,55 +19,11 @@
                 {
                     "name": "",
                     "id": "c6e04513-a4ae-4989-8deb-4c795936c5d6",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveLeft",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "e402c9a7-d489-4044-8fa5-020aedb6332e",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "MoveRight",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5355a1e3-ab49-464e-930d-a704227bdf5a",
-                    "path": "<Keyboard>/space",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Cast",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "cee38bef-e817-4374-a851-f9ce927bb9a2",
                     "path": "<Keyboard>/w",
-                    "interactions": "",
+                    "interactions": "Press(behavior=2)",
                     "processors": "",
                     "groups": "",
-                    "action": "TurnAround",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "02bce2e9-ea61-48d1-922d-f836d43666c3",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Wait",
+                    "action": "MoveAhead",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
