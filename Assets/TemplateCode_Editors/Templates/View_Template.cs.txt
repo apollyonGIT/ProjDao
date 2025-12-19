@@ -1,0 +1,34 @@
+﻿using Foundations.MVVM;
+using System;
+using UnityEngine;
+
+namespace #namespace#
+{
+    public class #cell#View : MonoBehaviour, I#cell#View
+    {
+        #cell# owner;
+
+        Action<object> IModelView.tick1 { get => m_tick1_ac; set => m_tick1_ac = value; }
+        Action<object> m_tick1_ac;
+
+        //==================================================================================================
+
+        void IModelView<#cell#>.attach(#cell# owner)
+        {
+            this.owner = owner;
+        }
+
+
+        void IModelView<#cell#>.detach(#cell# owner)
+        {
+            this.owner = null;
+        }
+
+
+        void I#cell#View.notify_on_tick1()
+        {
+            m_tick1_ac?.Invoke(owner);
+        }
+    }
+}
+
