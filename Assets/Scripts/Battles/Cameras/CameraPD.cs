@@ -1,5 +1,4 @@
 ﻿using Battles.Cameras;
-using Battles.Humans;
 using Foundations;
 using UnityEngine;
 
