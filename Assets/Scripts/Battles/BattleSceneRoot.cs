@@ -1,5 +1,6 @@
 ﻿using Commons;
 using Foundations;
+using Foundations.SceneLoads;
 using Foundations.Tickers;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,8 @@ namespace Battle
 {
     public class BattleSceneRoot : SceneRoot<BattleSceneRoot>
     {
+        public string world_scene_name;
+
         [Header("Ticker")]
         public Ticker_Mono ticker_mono;
 
@@ -39,6 +42,12 @@ namespace Battle
             var pos = mainCamera.ScreenToWorldPoint(new Vector3(mousePosition.x, mousePosition.y, 10));
 
             return pos;
+        }
+
+
+        public void btn_exit_battle()
+        {
+            SceneLoad_Utility.load_scene_with_loading(world_scene_name);
         }
     }
 }
